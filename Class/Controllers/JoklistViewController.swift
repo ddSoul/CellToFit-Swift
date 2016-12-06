@@ -14,9 +14,11 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     var tablewView : UITableView?
     var jokListData: NSMutableArray = NSMutableArray()
+    var pageNum    : NSInteger = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pageNum = 1
         initUI()
         createViews()
         requestList()
@@ -47,10 +49,18 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
         self.view.makeToastActivity(.center)
         self.tablewView?.addRefreshHeaderWithBlock {
+            self.view.makeToastActivity(.center)
             print("下拉刷新")
+            self.pageNum = 1
+            self.jokListData.removeAllObjects()
+            self.tablewView?.reloadData()
+            self.requestList()
         }
         self.tablewView?.addLoadMoreFooterWithBlock {
+            self.view.makeToastActivity(.center)
             print("上拉加载")
+            self.pageNum = 2
+            self.requestList()
         }
 //
 
@@ -58,7 +68,7 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func requestList()
     {
-        Alamofire.request("http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text", method:.get, parameters: ["page":"1","num":"10"],headers:["apikey":"eb0d7633268c4e4d346bd6cfa57a47e5"]).responseJSON{
+        Alamofire.request("http://apis.baidu.com/showapi_open_bus/showapi_joke/joke_text", method:.get, parameters: ["page":pageNum,"num":"10"],headers:["apikey":"eb0d7633268c4e4d346bd6cfa57a47e5"]).responseJSON{
             response in
             if let json = response.result.value {
                 
@@ -76,7 +86,14 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
                 self.tablewView?.reloadData()
                 self.view.hideToastActivity()
             }
-            
+            self.tablewView?.endRefreshHeaderWithBlock {
+                print("下拉结束")
+            }
+            //
+            self.tablewView?.endLoadMoreFooterWithBlock {
+                print("上拉结束")
+            }
+
         }
 
     }
@@ -94,14 +111,7 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tablewView?.endRefreshHeaderWithBlock {
-            print("下拉结束")
-        }
-//        
-        self.tablewView?.endLoadMoreFooterWithBlock {
-            print("上拉结束")
-        }
-
+   
     }
     
     override func didReceiveMemoryWarning() {

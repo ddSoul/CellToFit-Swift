@@ -25,13 +25,17 @@ class FooterView: UIView {
     
     func setupSubviews() {
         
-        let footer  = UIView();
-        footer.backgroundColor = UIColor.red
+        let footer  = UILabel();
+        footer.textColor = UIColor.green
+        footer.text = "上拉加载更多哦。"
+        footer.textAlignment = NSTextAlignment.center
         self.addSubview(footer)
+        self.backgroundColor = UIColor.red
         
         footer.snp.makeConstraints({
             (make) in
-            make.left.right.height.bottom.equalTo(0)
+            make.left.right.bottom.equalTo(0)
+            make.height.equalTo(30)
         })
     }
 }

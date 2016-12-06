@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 
-public let screenW = UIScreen.main.bounds.size.width
-public let screenH = UIScreen.main.bounds.size.height
 private var lcHeaderBlock: (()->Void)?
 private var lcFooterBlock: (()->Void)?
 var headerBool = false
@@ -34,16 +32,18 @@ extension UIScrollView{
     
     func endRefreshHeaderWithBlock(_ refreshBlock:() -> Void) -> Void {
         
-        headerBool = false
-        weak var weakSelf = self
-        UIView.animate(withDuration: 0.5,
-                       animations: {
-            weakSelf?.contentInset = UIEdgeInsets(top:64,left:0,bottom:0,right:0)
-                                    },
-                       completion: {
-                                    (finished) in
-                                    headerView.removeFromSuperview()
-                                    })
+        if headerBool {
+            headerBool = false
+            weak var weakSelf = self
+            UIView.animate(withDuration: 0.5,
+                           animations: {
+                            weakSelf?.contentInset = UIEdgeInsets(top:64,left:0,bottom:0,right:0)
+                },
+                           completion: {
+                            (finished) in
+                            headerView.removeFromSuperview()
+            })
+        }
     }
     
     /// 上拉加载更多
@@ -56,18 +56,20 @@ extension UIScrollView{
     
     func endLoadMoreFooterWithBlock(_ loadMoreBlock:() -> Void) -> Void {
         
-        footerBool = false
-        weak var weakSelf = self
-        UIView.animate(withDuration: 0.5,
-                       animations: {
-                        weakSelf?.contentInset = UIEdgeInsets(top:0,left:0,bottom:0,right:0)
-            },
-                       completion: {
-                        (finished) in
-                        footView.removeFromSuperview()
-        })
+        if footerBool {
+            footerBool = false
+            weak var weakSelf = self
+            UIView.animate(withDuration: 0.5,
+                           animations: {
+                            weakSelf?.contentInset = UIEdgeInsets(top:0,left:0,bottom:0,right:0)
+                },
+                           completion: {
+                            (finished) in
+                            footView.removeFromSuperview()
+            })
 
-        loadMoreBlock()
+        }
+    
     }
     
     open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -81,7 +83,6 @@ extension UIScrollView{
                 }
                 weak var weakSelf = self
                 headerView.frame = CGRect(x: 0, y: -36, width:screenW , height: 100)
-                headerView.backgroundColor = UIColor.green
                 weakSelf?.insertSubview(headerView, at: 0)
                 UIView.animate(withDuration: 0.5, animations: {
                     weakSelf?.contentInset = UIEdgeInsets(top:100,left:0,bottom:0,right:0)
@@ -97,7 +98,6 @@ extension UIScrollView{
                 }
                 weak var weakSelf = self
                 footView.frame = CGRect(x: 0, y: self.contentSize.height, width:screenW , height: 100)
-                footView.backgroundColor = UIColor.green
                 weakSelf?.insertSubview(footView, at: 0)
 
                 UIView.animate(withDuration: 0.5, animations: {

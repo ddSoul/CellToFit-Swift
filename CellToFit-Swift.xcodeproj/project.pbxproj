@@ -12,6 +12,7 @@
 		7B0BBEC01DF53A1600EAA96A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BBEBF1DF53A1600EAA96A /* UIView+Extension.swift */; };
 		7B0BBEC41DF54D6C00EAA96A /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0BBEC31DF54D6C00EAA96A /* FooterView.swift */; };
 		7B3D1E681DF1066400F73362 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3D1E671DF1066400F73362 /* Toast.swift */; };
+		7B43FA8F1DF64AA4009C269B /* headerPch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43FA8E1DF64AA4009C269B /* headerPch.swift */; };
 		7B944D8E1DF00CF2005F3C62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B944D8D1DF00CF2005F3C62 /* AppDelegate.swift */; };
 		7B944D951DF00CF2005F3C62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B944D941DF00CF2005F3C62 /* Assets.xcassets */; };
 		7B944DA31DF00CF2005F3C62 /* CellToFit_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B944DA21DF00CF2005F3C62 /* CellToFit_SwiftTests.swift */; };
@@ -128,6 +129,7 @@
 		7B0BBEBF1DF53A1600EAA96A /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B0BBEC31DF54D6C00EAA96A /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		7B3D1E671DF1066400F73362 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		7B43FA8E1DF64AA4009C269B /* headerPch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerPch.swift; sourceTree = "<group>"; };
 		7B944D8A1DF00CF2005F3C62 /* CellToFit-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CellToFit-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B944D8D1DF00CF2005F3C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B944D941DF00CF2005F3C62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				7B944D8D1DF00CF2005F3C62 /* AppDelegate.swift */,
 				7B944D941DF00CF2005F3C62 /* Assets.xcassets */,
 				7B944D991DF00CF2005F3C62 /* Info.plist */,
+				7B43FA8E1DF64AA4009C269B /* headerPch.swift */,
 			);
 			path = "CellToFit-Swift";
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				7B944E7D1DF01282005F3C62 /* ConstraintConstantTarget.swift in Sources */,
 				7B944D8E1DF00CF2005F3C62 /* AppDelegate.swift in Sources */,
 				7B944E881DF01282005F3C62 /* ConstraintMaker.swift in Sources */,
+				7B43FA8F1DF64AA4009C269B /* headerPch.swift in Sources */,
 				7B944E961DF01282005F3C62 /* Debugging.swift in Sources */,
 				7B944E7A1DF01282005F3C62 /* Constraint.swift in Sources */,
 				7B944DC41DF00DBE005F3C62 /* JokModel.swift in Sources */,

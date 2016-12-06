@@ -25,13 +25,17 @@ class HeaderView: UIView {
     
     func setupSubviews() {
         
-        let header  = UIView();
-        header.backgroundColor = UIColor.red
+        let header  = UILabel();
+        header.textColor = UIColor.green
+        header.textAlignment = NSTextAlignment.center
+        header.text = "下拉刷新了。。。"
         self .addSubview(header)
+        self.backgroundColor = UIColor.red
         
         header.snp.makeConstraints({
             (make) in
-            make.left.right.height.bottom.equalTo(0)
+            make.left.right.top.equalTo(0)
+            make.height.equalTo(30)
         })
     }
 
