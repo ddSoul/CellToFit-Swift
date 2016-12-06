@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Class/Controllers/JoklistViewController.swift"
-            timestampString = "502337592.789565"
+            timestampString = "502620690.926916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "requestList()"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "createViews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tool/Refresh/RefreshEX.swift"
+            timestampString = "502619358.934496"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "observeValue(forKeyPath:of:change:context:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Class/Controllers/JoklistViewController.swift"
-            timestampString = "502337592.789565"
+            timestampString = "502620690.926916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "requestList()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "createViews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,46 +57,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Class/Controllers/JoklistViewController.swift"
-            timestampString = "502337592.789565"
+            filePath = "Tool/Refresh/RefreshEX.swift"
+            timestampString = "502619443.054209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "requestList()"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "observeValue(forKeyPath:of:change:context:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellToFit_Swift.JoklistViewController.requestList () -&gt; ()"
-                  moduleName = "CellToFit-Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dengxiliang/Desktop/CellToFit-Swift/Class/Controllers/JoklistViewController.swift"
-                  timestampString = "502285631.0712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CellToFit_Swift.JoklistViewController.(requestList () -&gt; ()).(closure #1)"
-                  moduleName = "CellToFit-Swift"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dengxiliang/Desktop/CellToFit-Swift/Class/Controllers/JoklistViewController.swift"
-                  timestampString = "502285631.073644"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

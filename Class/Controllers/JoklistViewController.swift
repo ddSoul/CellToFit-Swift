@@ -46,7 +46,13 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
         })
     
         self.view.makeToastActivity(.center)
-        
+        self.tablewView?.addRefreshHeaderWithBlock {
+            print("下拉刷新")
+        }
+        self.tablewView?.addLoadMoreFooterWithBlock {
+            print("上拉加载")
+        }
+//
 
     }
     
@@ -87,6 +93,17 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return jokListData.count
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tablewView?.endRefreshHeaderWithBlock {
+            print("下拉结束")
+        }
+//        
+        self.tablewView?.endLoadMoreFooterWithBlock {
+            print("上拉结束")
+        }
+
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
