@@ -10,7 +10,25 @@ import UIKit
 import SnapKit
 import Alamofire
 
-class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+protocol testProtocol {
+    func test()
+}
+
+extension testProtocol where Self: UIViewController {
+    func test() {
+        //在这里加默认实现，并提供ErrorView的默认参数。
+        print("测试面向-协议");
+    }
+}
+//class KrakenViewController: UIViewController, testProtocol {
+//    func methodThatHasAnError() {
+//        //…
+//        //抛出error，原因是Kraken海妖今天吃人会感到不适。
+//        presentError() //Woohoo! 没有参数了！我们现在有默认实现了！
+//    }
+//}
+
+class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,testProtocol {
 
     var tablewView : UITableView?
     var jokListData: NSMutableArray = NSMutableArray()
@@ -22,6 +40,7 @@ class JoklistViewController: UIViewController,UITableViewDelegate,UITableViewDat
         initUI()
         createViews()
         requestList()
+//        test()
         // Do any additional setup after loading the view.
     }
     
