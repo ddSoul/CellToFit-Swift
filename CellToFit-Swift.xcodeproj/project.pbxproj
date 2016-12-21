@@ -129,6 +129,7 @@
 		7B0BBEBF1DF53A1600EAA96A /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7B0BBEC31DF54D6C00EAA96A /* FooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		7B3D1E671DF1066400F73362 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		7B41ABD71DFFF2C400C9C813 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		7B43FA8E1DF64AA4009C269B /* headerPch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = headerPch.swift; sourceTree = "<group>"; };
 		7B944D8A1DF00CF2005F3C62 /* CellToFit-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CellToFit-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B944D8D1DF00CF2005F3C62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -336,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0BBEB51DF52EFD00EAA96A /* Refresh */,
+				7B41ABD71DFFF2C400C9C813 /* MyPlayground.playground */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
