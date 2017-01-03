@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        let jokVc = JoklistViewController()
+        let jokVc = HomeViewController()
         let navVc=UINavigationController(rootViewController: jokVc);
         self.window?.rootViewController = navVc
         self.window?.makeKeyAndVisible()

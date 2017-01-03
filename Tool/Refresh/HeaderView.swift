@@ -10,7 +10,7 @@ import UIKit
 
 class HeaderView: UIView {
 
-       override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setupSubviews()
     }

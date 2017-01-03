@@ -12,7 +12,7 @@ import Alamofire
 protocol testProtocol {
     func test()
 }
-
+//where self:只能在UIViewController中使用
 extension testProtocol where Self: UIViewController {
     func test() {
         //在这里加默认实现，并提供ErrorView的默认参数。
