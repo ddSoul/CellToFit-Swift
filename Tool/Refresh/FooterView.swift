@@ -27,7 +27,7 @@ class FooterView: UIView {
         
         let footer  = UILabel();
         footer.textColor = UIColor.green
-        footer.text = "上拉加载更多哦。"
+        footer.text = "上拉加载更多哦.."
         footer.textAlignment = NSTextAlignment.center
         self.addSubview(footer)
         self.backgroundColor = UIColor.red

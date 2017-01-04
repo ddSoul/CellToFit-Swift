@@ -12,6 +12,7 @@ import Alamofire
 protocol testProtocol {
     func test()
 }
+
 //where self:只能在UIViewController中使用
 extension testProtocol where Self: UIViewController {
     func test() {
